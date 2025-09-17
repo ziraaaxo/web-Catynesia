@@ -1,0 +1,85 @@
+/* Catynesia - style.css */
+:root{
+  --bg:#f7fbf9;
+  --card:#ffffff;
+  --accent:#6b9f6b;
+  --muted:#666;
+  --danger:#d9534f;
+  --shadow: 0 6px 20px rgba(0,0,0,0.08);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg, #eef9f0 0%, var(--bg) 100%);
+  color:#222;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+
+/* Container */
+.container{
+  width:100%;
+  max-width:420px;
+  background:var(--card);
+  border-radius:12px;
+  padding:28px;
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+
+/* Headings */
+h1,h2,h3{margin:8px 0}
+h1{font-size:20px}
+h2{font-size:18px;color:var(--accent)}
+h3{font-size:16px;color:#333}
+
+/* Form */
+form{margin-top:14px;text-align:left}
+label{display:block;font-weight:600;margin-bottom:6px}
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="tel"], textarea, select{
+  width:100%;
+  padding:10px 12px;
+  margin-bottom:12px;
+  border:1px solid #e3e6e8;
+  border-radius:8px;
+  font-size:14px;
+  outline:none;
+}
+textarea{resize:vertical}
+input[type="radio"]{margin-right:6px}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:white;
+  padding:10px 14px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  text-decoration:none;
+}
+.btn.secondary{background:transparent;color:var(--accent);border:1px solid #e6efe6}
+.small{font-size:13px}
+
+/* Footer links */
+.links{margin-top:12px}
+.links a{color:var(--accent);text-decoration:none}
+
+/* Helpers */
+.row{display:flex;gap:8px;align-items:center}
+.center{display:flex;align-items:center;justify-content:center}
+.notice{font-size:13px;color:var(--muted);margin-top:12px}
+.error{color:var(--danger);font-size:13px;margin-top:-8px;margin-bottom:8px}
+
+/* Responsive */
+@media (max-width:480px){
+  body{padding:16px}
+  .container{padding:20px}
+}

@@ -3,58 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <title>Adopt! Catynesia - Registrasi</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <center>
+  <div class="container">
     <h2>Registrasi Pengguna Baru</h2>
-    <p>Buat akun baru untuk mulai mengadopsi!</p>
+    <p class="notice">Buat akun baru untuk mulai mengadopsi!</p>
 
-    <form action="welcome.html" method="post">
+    <form id="register-form" action="welcome.html" method="post" novalidate>
       <!-- ID Pengguna -->
-      <label for="reg-id_pengguna">Buat ID Pengguna:</label><br>
-      <input type="text" id="reg-id_pengguna" name="reg-id_pengguna" required><br><br>
+      <label for="reg-id_pengguna">Buat ID Pengguna:</label>
+      <input type="text" id="reg-id_pengguna" name="reg-id_pengguna" required>
 
       <!-- Email -->
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
       <!-- Kata sandi -->
-      <label for="reg-kata_sandi">Buat Kata Sandi:</label><br>
-      <input type="password" id="reg-kata_sandi" name="reg-kata_sandi" required><br><br>
+      <label for="reg-kata_sandi">Buat Kata Sandi:</label>
+      <div class="row">
+        <input type="password" id="reg-kata_sandi" name="reg-kata_sandi" required>
+        <button type="button" class="btn secondary small toggle-show" data-target="#reg-kata_sandi">Tampilkan</button>
+      </div>
 
       <!-- TTL -->
-      <label for="ttl">Tanggal Lahir:</label><br>
-      <input type="date" id="ttl" name="ttl" required><br><br>
+      <label for="ttl">Tanggal Lahir:</label>
+      <input type="date" id="ttl" name="ttl" required>
 
       <!-- Nomor HP -->
-      <label for="nohp">Nomor HP:</label><br>
-      <input type="tel" id="nohp" name="nohp" placeholder="08xxxxxxxxxx" required><br><br>
+      <label for="nohp">Nomor HP:</label>
+      <input type="tel" id="nohp" name="nohp" placeholder="08xxxxxxxxxx" required>
 
       <!-- Jenis Kelamin -->
-      <label>Jenis Kelamin:</label><br>
+      <label>Jenis Kelamin:</label>
       <input type="radio" id="laki" name="kelamin" value="Laki-laki" required>
       <label for="laki">Laki-laki</label><br>
       <input type="radio" id="perempuan" name="kelamin" value="Perempuan">
       <label for="perempuan">Perempuan</label><br><br>
 
       <!-- Alamat -->
-      <label for="alamat">Alamat Lengkap:</label><br>
-      <textarea id="alamat" name="alamat" rows="3" cols="30" required></textarea><br><br>
+      <label for="alamat">Alamat Lengkap:</label>
+      <textarea id="alamat" name="alamat" rows="3" cols="30" required></textarea>
 
       <!-- Pengalaman adopsi -->
-      <label for="pengalaman">Apakah Pernah Mengadopsi Sebelumnya:</label><br>
+      <label for="pengalaman">Apakah Pernah Mengadopsi Sebelumnya:</label>
       <input type="radio" id="ya" name="pengalaman" value="Ya" required>
       <label for="ya">Ya</label><br>
       <input type="radio" id="tidak" name="pengalaman" value="Tidak">
       <label for="tidak">Tidak</label><br><br>
 
       <!-- Tombol submit -->
-      <input type="submit" value="Daftar">
+      <div class="center">
+        <input class="btn" type="submit" value="Daftar">
+      </div>
     </form>
 
-    <p><a href="index.html">Kembali ke Halaman Utama</a></p>
-  </center>
+    <p class="links"><a href="index.html">Kembali ke Halaman Utama</a></p>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>

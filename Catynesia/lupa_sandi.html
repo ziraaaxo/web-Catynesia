@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Adopt! Catynesia - Reset Sandi</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <center>
+  <div class="container">
     <h2>Reset Kata Sandi</h2>
-    <p>Masukkan email Anda yang pernah terdaftar untuk mengatur ulang kata sandi.</p>
+    <p class="notice">Masukkan email Anda yang pernah terdaftar untuk mengatur ulang kata sandi.</p>
 
-    <form action="reset_success.html" method="post">
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+    <form id="reset-form" action="reset_success.html" method="post" novalidate>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-      <input type="submit" value="Kirim Link Reset">
+      <div class="center">
+        <input class="btn" type="submit" value="Kirim Link Reset">
+      </div>
     </form>
 
-    <p><a href="index.html">Kembali ke Halaman Utama</a></p>
-  </center>
+    <p class="links"><a href="index.html">Kembali ke Halaman Utama</a></p>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
